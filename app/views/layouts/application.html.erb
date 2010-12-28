@@ -7,6 +7,8 @@
   </head>
   <body>
     <%= yield %>
-    <%= google_analytics_js %>
+    
+    
+    <%= render :partial => ‘layouts/ga’ if RAILS_ENV == ‘production’ %>
   </body>
 </html>
